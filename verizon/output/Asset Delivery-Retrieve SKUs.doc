@@ -1,0 +1,18 @@
+<html><center><h1>Retrieve SKUs</h1></center><h2>SUC Description</h2><p></p><h2>Actors</h2><p>DDC System</p><p>DDC Ops</p><h2>Activities</h2>
+<table border="1">
+<tbody>
+<tr><td>Receive asset list</td><td></td></tr>
+<tr><td>Is asset present?</td><td></td></tr>
+<tr><td>Fetch the asset</td><td></td></tr>
+<tr><td>Fetch the corresponding encryption key</td><td></td></tr>
+<tr><td>Decrypt the asset</td><td></td></tr>
+<tr><td>Get the metadata</td><td></td></tr>
+<tr><td>More assets?</td><td></td></tr>
+<tr><td>Notify DDC Ops</td><td></td></tr>
+<tr><td>Attempt error fix</td><td></td></tr>
+<tr><td>Error fixed?</td><td></td></tr>
+<tr><td>Check for asset presence</td><td></td></tr>
+<tr><td>Notify content provider</td><td></td></tr>
+</tbody>
+</table>
+<h2>Preconditions</h2><p></p><h2>Postconditions</h2><p></p></html>

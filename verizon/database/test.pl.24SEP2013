@@ -1,0 +1,84 @@
+#!/usr/bin/perl -w
+
+use strict;
+use Text::Iconv;
+use Spreadsheet::XLSX;
+use XML::Twig;
+
+my $converter = Text::Iconv -> new ("utf-8", "windows-1251");
+
+#get a list of all excelFiles ending in xlsx extension
+my @excelFiles = <*.xlsx>;
+
+foreach my $excelFile (@excelFiles) {
+
+	print "Processing $excelFile...";
+
+	#strip the trailing carriage return
+	chomp ($excelFile);
+	my $excel = Spreadsheet::XLSX->new($excelFile, $converter) or die "No Excel files found. Exiting.";
+
+	print "done. \n";
+
+	#use the first sheet only
+	my $sheet = ${$excel->{Worksheet}}[0];
+
+	#If $sheet->{'MaxRow'} has a value that evaluates to false, make
+	#$sheet->{'MaxRow'} equal to $sheet->{'MinRow'}.
+	$sheet->{MaxRow} ||= $sheet->{MinRow};
+
+	foreach my $row ($sheet->{MinRow} .. $sheet->{MaxRow}) {
+        	my $mpm_description = 	$sheet->{Cells}[$row][2]->{Val};
+        	my $CID = 		$sheet->{Cells}[$row][10]->{Val};
+        	my $ALID = 		$sheet->{Cells}[$row][11]->{Val};
+		#print "MPM: $mpm_description \t\t CID: $CID \t\t ALID: $ALID \n" if defined $mpm_description;
+
+
+		if ($mpm_description) {
+			my $titleMatch = 'Name=\"Title\" Value=\"'.$mpm_description.'\"';
+	
+#			print "title match is $titleMatch \n";
+
+			#this grep returns a filename containing a title.
+			#completely ignoring XML but it doesn't matter, just need
+			#to know whether a string is in there or not
+			my $matchedFile = `grep -l "$titleMatch" *.xml`;
+
+			#strip the trailing carriage return
+			chomp $matchedFile;
+
+			if ($matchedFile ne '') {
+				print "Found a match for $mpm_description in $matchedFile! \n";
+				insertUV($matchedFile,$CID,$ALID) unless ($matchedFile eq '');
+			}
+		}
+	}
+}
+
+
+exit 0;
+
+sub insertUV {
+	my ($infile,$cid,$alid) = @_;
+	print "Adding UV fields $cid | $alid to $infile \n";
+	
+	#create a new XML with a .UV extension
+	my $outfile=$infile.".UV";
+
+	my $twig=new XML::Twig (pretty_print  => 'indented',
+			id => 'Asset_Class');
+
+	$twig->parsefile($infile);
+
+	my $titleClass = $twig->elt_id('title');
+
+	$titleClass->insert_new_elt('after','App_Data', {App=>'MOD', Name=>'CID', Value=>$cid});
+	$titleClass->insert_new_elt('after','App_Data', {App=>'MOD', Name=>'ALID', Value=>$alid});
+
+	#create new .UV file, error if unable to create
+	#this will ALWAYS overwrite any previously created .UV files
+	open (my $fh_out, '>', $outfile) or die "unable to open '$outfile' for writing: $!";
+
+	#write the new XML, with the UV fields added
+	$twig->print($fh_out);
+} 

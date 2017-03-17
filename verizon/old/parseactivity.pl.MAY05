@@ -1,0 +1,119 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+use XML::XPath;
+use XML::XPath::XMLParser;
+use OpenOffice::OODoc;
+
+my @emxFileList = `ls ~/documents/workspace/Verizon/Asset*.emx`;
+
+my $L1HeadingStyle = 'Heading 1';
+my $L2HeadingStyle = 'Heading 2';
+
+foreach my $modelFile (@emxFileList) {
+	chomp $modelFile;
+	die "No file specified!" unless ($modelFile);
+
+	my $parser = XML::XPath->new(filename => $modelFile);
+
+	#get the model name, should only return one element - 0th element
+	my @modelNameArray = $parser->find('//uml:Model')->get_nodelist;
+	my $modelName = $modelNameArray[0]->getAttribute('name');
+	#____________________________
+
+
+	my @activityDiagrams = $parser->find('//packagedElement[@xmi:type="uml:Activity"]')->get_nodelist;
+	#print "activities has ". scalar @activities ." elements \n";
+	foreach my $activityDiagram (@activityDiagrams) {
+
+		#get the name
+		my $activityDiagramName = $activityDiagram->getAttribute('name');
+		print "Processing $activityDiagramName \n";
+
+		#construct filename
+		my $fileName = 'output/'.$modelName."-".$activityDiagramName.'.odt';
+
+		#eliminate blanks
+		$fileName =~ s/ +//g;
+		
+		#create a new document
+		my $document = odfDocument(file => $fileName, create => 'text');
+
+		#add a heading
+		$document->appendHeading(text	=> $activityDiagramName, style => 'Title');
+
+		#create the Actors heading
+		$document->appendHeading(text => 'Actors', level => '1', style => $L1HeadingStyle);
+
+		#actors live in ActivityPartitions
+		#first, lets get the total number of diagrams
+		my @actors = $parser->find('./group[@xmi:type="uml:ActivityPartition"]',$activityDiagram)->get_nodelist;
+#		my $totalActors = scalar @actors;
+
+		my $row = 0;
+		foreach my $actor (@actors) {
+			my $actorName = $actor->getAttribute('name');
+			$document->appendParagraph
+				(
+				text    => $actorName,
+				style   => 'Text body'
+				);
+		}
+		
+		#new Activities heading
+		$document->appendHeading(text => 'Activities', level =>'1', style => $L1HeadingStyle);
+
+		#how many activities?
+		my @activities = $parser->find('./node',$activityDiagram)->get_nodelist;
+		my $totalActivities = scalar @activities;
+
+		my $precondition = '';
+		my $postcondition = '';
+
+		foreach my $node (@activities) {
+			my $commentBody = $node->find('ownedComment/body')->string_value;
+			my $nodeName = $node->getAttribute('name');
+			my $nodeId = $node->getAttribute('xmi:id');
+			my $nodeType = $node->getAttribute('xmi:type');
+
+#			print "node: $nodeName nodeType: $nodeType comment: $commentBody \n";
+			#node name is here
+			$document->appendHeading(
+				text => $nodeName, 
+				level =>'2', 
+				style => $L2HeadingStyle) unless (($nodeType eq 'uml:InitialNode') || ($nodeType eq 'uml:ActivityFinalNode'));
+
+			$precondition = $commentBody if ($nodeType eq 'uml:InitialNode');
+			$postcondition = $commentBody if ($nodeType eq 'uml:ActivityFinalNode');
+
+			#documentation comment is here
+			$document->appendParagraph
+      	(
+         	text    => $commentBody,
+         	style   => 'Text body'
+         ) unless (($nodeType eq 'uml:InitialNode') || ($nodeType eq 'uml:ActivityFinalNode'));
+		}
+
+		$document->appendHeading(text => 'Preconditions', level =>'1', style => $L1HeadingStyle);
+		$document->appendParagraph
+      	(
+         	text    => $precondition, 
+         	style   => 'Text body'
+         );
+
+		$document->appendHeading(text => 'Postconditions', level =>'1', style => $L1HeadingStyle);
+		$document->appendParagraph
+      	(
+         	text    => $postcondition,
+         	style   => 'Text body'
+         );
+
+		#write the doc to disk
+		$document->save;
+	}
+
+#		my $metadata = OpenOffice::OODoc::Meta->new(file => $fileName);
+#		print "Language: " . $metadata->language();
+
+}

@@ -1,0 +1,30 @@
+<html><center><h1>Package SKUs</h1></center><h2>SUC Description</h2><p></p><h2>Actors</h2><p>DDC</p><h2>Activities</h2>
+<table border="1">
+<tbody>
+<tr><td>Receive distribution profile</td><td></td></tr>
+<tr><td>Verify SKUs available</td><td></td></tr>
+<tr><td>SKUs available?</td><td></td></tr>
+<tr><td>Fetch distribution profile</td><td></td></tr>
+<tr><td>Fetch data map</td><td></td></tr>
+<tr><td>Generate meta data</td><td></td></tr>
+<tr><td>Create package</td><td></td></tr>
+<tr><td>Add watermarks</td><td></td></tr>
+<tr><td>More SKUs to package?</td><td></td></tr>
+<tr><td>Add SKUs to package</td><td></td></tr>
+<tr><td>Digital forensics required?</td><td></td></tr>
+<tr><td>Add digital forensics</td><td></td></tr>
+<tr><td>Check watermark requirements</td><td></td></tr>
+<tr><td>Watermarks required?</td><td></td></tr>
+<tr><td>Add metadata to package</td><td></td></tr>
+<tr><td>Check manifest requirements</td><td></td></tr>
+<tr><td>Manifest required?</td><td></td></tr>
+<tr><td>Create manifest</td><td></td></tr>
+<tr><td>Add manifest to package</td><td></td></tr>
+<tr><td>Close package</td><td></td></tr>
+<tr><td>Encryption required?</td><td></td></tr>
+<tr><td>Fetch encryption key</td><td></td></tr>
+<tr><td>Encrypt package</td><td></td></tr>
+<tr><td>Notify requestor</td><td></td></tr>
+</tbody>
+</table>
+<h2>Preconditions</h2><p></p><h2>Postconditions</h2><p></p></html>

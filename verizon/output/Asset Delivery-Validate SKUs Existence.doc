@@ -1,0 +1,13 @@
+<html><center><h1>Validate SKUs Existence</h1></center><h2>SUC Description</h2><p></p><h2>Actors</h2><p>DDC</p><p>DWM</p><h2>Activities</h2>
+<table border="1">
+<tbody>
+<tr><td>Accept asset list input</td><td></td></tr>
+<tr><td>Select an asset from the list</td><td></td></tr>
+<tr><td>Verify asset existence</td><td></td></tr>
+<tr><td>Does asset exist?</td><td></td></tr>
+<tr><td>Check for more assets</td><td></td></tr>
+<tr><td>More assets in list?</td><td></td></tr>
+<tr><td>Notify user of error</td><td></td></tr>
+</tbody>
+</table>
+<h2>Preconditions</h2><p></p><h2>Postconditions</h2><p></p></html>

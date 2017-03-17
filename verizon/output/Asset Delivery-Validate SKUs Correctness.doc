@@ -1,0 +1,17 @@
+<html><center><h1>Validate SKUs Correctness</h1></center><h2>SUC Description</h2><p></p><h2>Actors</h2><p>DDC</p><p>User</p><p>DWM</p><h2>Activities</h2>
+<table border="1">
+<tbody>
+<tr><td>Accept distrubtion profile input</td><td></td></tr>
+<tr><td>Check for distribution format</td><td></td></tr>
+<tr><td>Is format valid?</td><td></td></tr>
+<tr><td>Check for more SKUs</td><td></td></tr>
+<tr><td>More SKUs?</td><td></td></tr>
+<tr><td>Check for extraneous assets</td><td></td></tr>
+<tr><td>Any extraneous assets?</td><td></td></tr>
+<tr><td>Select a SKU</td><td></td></tr>
+<tr><td>Check for asset presense</td><td></td></tr>
+<tr><td>Is asset present?</td><td></td></tr>
+<tr><td>Notify user of error</td><td></td></tr>
+</tbody>
+</table>
+<h2>Preconditions</h2><p></p><h2>Postconditions</h2><p></p></html>

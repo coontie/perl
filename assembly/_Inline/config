@@ -1,0 +1,25 @@
+version : 0.46
+languages : %
+    AS : ASM
+    ASM : ASM
+    C : C
+    Foo : Foo
+    GASP : ASM
+    NASM : ASM
+    as : ASM
+    asm : ASM
+    foo : Foo
+    gasp : ASM
+    nasm : ASM
+types : %
+    ASM : compiled
+    C : compiled
+    Foo : interpreted
+modules : %
+    ASM : Inline::ASM
+    C : Inline::C
+    Foo : Inline::Foo
+suffixes : %
+    ASM : so
+    C : so
+    Foo : foo

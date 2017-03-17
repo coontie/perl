@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity Type="requirement">
+  <Fields>
+    <Field Name="vc-checkout-comments">
+      <Value />
+    </Field>
+    <Field Name="rbt-analysis-setup-data">
+      <Value />
+    </Field>
+    <Field Name="rbt-custom-testing-level">
+      <Value />
+    </Field>
+    <Field Name="rbt-effective-bsns-impact">
+      <Value />
+    </Field>
+    <Field Name="alert-data">
+      <Value />
+    </Field>
+    <Field Name="dev-comments">
+      <Value>Pending data or thresholds are available to R&amp;A through Metadata or log files</Value>
+    </Field>
+    <Field Name="cover-count">
+      <Value>0</Value>
+    </Field>
+    <Field Name="rbt-effective-fail-prob">
+      <Value />
+    </Field>
+    <Field Name="request-status">
+      <Value />
+    </Field>
+    <Field Name="rbt-assessment-data">
+      <Value />
+    </Field>
+    <Field Name="rbt-custom-fail-prob">
+      <Value />
+    </Field>
+    <Field Name="order-id">
+      <Value>1</Value>
+    </Field>
+    <Field Name="check-out-user-name">
+      <Value />
+    </Field>
+    <Field Name="rbt-testing-level">
+      <Value />
+    </Field>
+    <Field Name="target-rel" />
+    <Field Name="parent-id">
+      <Value>18741</Value>
+    </Field>
+    <Field Name="req-rich-content">
+      <Value />
+    </Field>
+    <Field Name="request-type">
+      <Value />
+    </Field>
+    <Field Name="user-05" />
+    <Field Name="user-04">
+      <Value />
+    </Field>
+    <Field Name="rbt-use-custom-risk">
+      <Value />
+    </Field>
+    <Field Name="user-03">
+      <Value />
+    </Field>
+    <Field Name="rbt-testing-hours" />
+    <Field Name="user-02">
+      <Value />
+    </Field>
+    <Field Name="user-01">
+      <Value />
+    </Field>
+    <Field Name="request-id" />
+    <Field Name="user-09">
+      <Value />
+    </Field>
+    <Field Name="user-08">
+      <Value />
+    </Field>
+    <Field Name="request-assign-to">
+      <Value />
+    </Field>
+    <Field Name="user-07">
+      <Value>1239</Value>
+    </Field>
+    <Field Name="user-06">
+      <Value />
+    </Field>
+    <Field Name="rbt-effective-func-cmplx">
+      <Value />
+    </Field>
+    <Field Name="vc-status">
+      <Value />
+    </Field>
+    <Field Name="rbt-custom-func-cmplx">
+      <Value />
+    </Field>
+    <Field Name="creation-time">
+      <Value>2013-02-10</Value>
+    </Field>
+    <Field Name="user-14">
+      <Value>1541</Value>
+    </Field>
+    <Field Name="user-13">
+      <Value />
+    </Field>
+    <Field Name="user-16">
+      <Value>Collect Bit Error Rate from Origin Server</Value>
+    </Field>
+    <Field Name="user-15">
+      <Value>2.1 (+)</Value>
+    </Field>
+    <Field Name="last-modified">
+      <Value>2013-03-05 09:59:13</Value>
+    </Field>
+    <Field Name="user-10">
+      <Value />
+    </Field>
+    <Field Name="user-12">
+      <Value />
+    </Field>
+    <Field Name="user-11">
+      <Value />
+    </Field>
+    <Field Name="type-id">
+      <Value>106</Value>
+    </Field>
+    <Field Name="vc-checkout-time">
+      <Value />
+    </Field>
+    <Field Name="user-18">
+      <Value>ComScore</Value>
+    </Field>
+    <Field Name="user-17">
+      <Value>Reporting Analytics</Value>
+    </Field>
+    <Field Name="user-19">
+      <Value>Comply</Value>
+    </Field>
+    <Field Name="rbt-rnd-estim-effort-hours" />
+    <Field Name="req-product">
+      <Value />
+    </Field>
+    <Field Name="rbt-use-custom-func-cmplx">
+      <Value />
+    </Field>
+    <Field Name="rbt-analysis-result-data">
+      <Value />
+    </Field>
+    <Field Name="req-comment">
+      <Value>The system shall collect for reporting bit error rate (Calculated by dividing the number of bits received in error by the total number of bits transmitted) of the stream post-acquisition at the Origin servers</Value>
+    </Field>
+    <Field Name="rbt-fail-prob">
+      <Value />
+    </Field>
+    <Field Name="has-traced-to">
+      <Value>N</Value>
+    </Field>
+    <Field Name="vc-checkin-time">
+      <Value />
+    </Field>
+    <Field Name="user-22">
+      <Value />
+    </Field>
+    <Field Name="user-23">
+      <Value />
+    </Field>
+    <Field Name="user-20">
+      <Value />
+    </Field>
+    <Field Name="istemplate">
+      <Value>0</Value>
+    </Field>
+    <Field Name="user-21">
+      <Value>Reporting Analytics</Value>
+    </Field>
+    <Field Name="has-traced-from">
+      <Value>N</Value>
+    </Field>
+    <Field Name="user-24">
+      <Value>Media Delivery Quality Monitori</Value>
+    </Field>
+    <Field Name="user-25">
+      <Value>R&amp;A Shall Pull from data collector log files related to  Bit error rate (Calculated by dividing the number of bits received in error by the total number of bits transmitted) of the stream post-acquisition at the Origin servers</Value>
+    </Field>
+    <Field Name="rbt-bsns-impact">
+      <Value />
+    </Field>
+    <Field Name="vc-version-number" />
+    <Field Name="request-updates">
+      <Value />
+    </Field>
+    <Field Name="status">
+      <Value>Not Covered</Value>
+    </Field>
+    <Field Name="req-type">
+      <Value />
+    </Field>
+    <Field Name="vc-checkin-date" />
+    <Field Name="rbt-custom-risk">
+      <Value />
+    </Field>
+    <Field Name="owner">
+      <Value />
+    </Field>
+    <Field Name="rbt-effective-risk">
+      <Value />
+    </Field>
+    <Field Name="rbt-last-analysis-date" />
+    <Field Name="no-of-sons">
+      <Value>0</Value>
+    </Field>
+    <Field Name="request-server">
+      <Value />
+    </Field>
+    <Field Name="vc-checkout-date" />
+    <Field Name="has-rich-content">
+      <Value>N</Value>
+    </Field>
+    <Field Name="id">
+      <Value>18816</Value>
+    </Field>
+    <Field Name="rbt-risk">
+      <Value />
+    </Field>
+    <Field Name="name">
+      <Value>16763-ComScore</Value>
+    </Field>
+    <Field Name="has-linkage">
+      <Value>N</Value>
+    </Field>
+    <Field Name="rbt-custom-testing-hours" />
+    <Field Name="vc-checkin-user-name">
+      <Value />
+    </Field>
+    <Field Name="request-note">
+      <Value />
+    </Field>
+    <Field Name="rbt-use-custom-tl-and-te">
+      <Value />
+    </Field>
+    <Field Name="req-ver-stamp">
+      <Value>5</Value>
+    </Field>
+    <Field Name="req-time">
+      <Value>01:03:16</Value>
+    </Field>
+    <Field Name="hierarchical-path">
+      <Value>AAAAAEAABAAAAAGAAAAAA</Value>
+    </Field>
+    <Field Name="rbt-use-custom-bsns-impact">
+      <Value />
+    </Field>
+    <Field Name="rbt-custom-bsns-impact">
+      <Value />
+    </Field>
+    <Field Name="attachment">
+      <Value />
+    </Field>
+    <Field Name="vc-checkin-comments">
+      <Value />
+    </Field>
+    <Field Name="rbt-use-custom-fail-prob">
+      <Value />
+    </Field>
+    <Field Name="rbt-func-cmplx">
+      <Value />
+    </Field>
+    <Field Name="req-reviewed">
+      <Value>Not Reviewed</Value>
+    </Field>
+    <Field Name="target-rcyc" />
+    <Field Name="rbt-ignore-in-analysis">
+      <Value />
+    </Field>
+    <Field Name="req-priority">
+      <Value />
+    </Field>
+    <Field Name="rbt-analysis-parent-req-id" />
+    <Field Name="father-name">
+      <Value>Comply</Value>
+    </Field>
+  </Fields>
+</Entity>

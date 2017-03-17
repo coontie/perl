@@ -1,0 +1,92 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+use XML::XPath;
+use XML::XPath::XMLParser;
+use OpenOffice::OODoc;
+
+my @emxFileList = `ls ~/documents/workspace/Verizon/*.emx`;
+
+my $headingStyle = 'Heading 1';
+
+foreach my $modelFile (@emxFileList) {
+	chomp $modelFile;
+	die "No file specified!" unless ($modelFile);
+
+	my $parser = XML::XPath->new(filename => $modelFile);
+
+	#get the model name, should only return one element - 0th element
+	my @modelNameArray = $parser->find('//uml:Model')->get_nodelist;
+	my $modelName = $modelNameArray[0]->getAttribute('name');
+	#____________________________
+
+	print "L2: $modelName \n";
+
+	my @activityDiagrams = $parser->find('//packagedElement[@xmi:type="uml:Activity"]')->get_nodelist;
+	#print "activities has ". scalar @activities ." elements \n";
+	foreach my $activityDiagram (@activityDiagrams) {
+
+		#get the name
+		my $activityDiagramName = $activityDiagram->getAttribute('name');
+		print "$activityDiagramName \n";
+
+		#construct filename
+		my $fileName = $modelName."-".$activityDiagramName;
+
+		#eliminate blanks
+		$fileName =~ s/ +//g;
+		
+		#create a new document
+		my $document = odfDocument(file => "output/$fileName.odt", create => 'text');
+
+		#add a heading
+		$document->appendHeading(text	=> $activityDiagramName);
+
+		#create the Actors heading
+		$document->appendHeading(text => 'Actors', level => '1', style => $headingStyle);
+
+		#actors live in ActivityPartitions
+		#first, lets get the total number of diagrams
+		my @actors = $parser->find('./group[@xmi:type="uml:ActivityPartition"]',$activityDiagram)->get_nodelist;
+		my $totalActors = scalar @actors;
+
+		#create the table - #lines, #columns
+		#number of rows = number of actors, $columns columns
+		my $columns = 1;
+		$document->appendTable("ActorsTable", $totalActors, $columns);
+		my $row = 0;
+		foreach my $actor (@actors) {
+			my $actorName = $actor->getAttribute('name');
+			$document->cellValue("ActorsTable", $row, 0, $actorName);
+			$row++;
+		}
+		
+		#new Activities heading
+		$document->appendHeading(text => 'Activities', level =>'1', style => $headingStyle);
+
+		#how many activities?
+		my @activities = $parser->find('./node',$activityDiagram)->get_nodelist;
+		my $totalActivities = scalar @activities;
+
+#		$columns = 1;
+#		$document->appendTable("ActivitiesTable", $totalActivities, $columns);
+		#reset the row counter back to 0
+		$row = 0;
+		foreach my $node (@activities) {
+			my $nodeName = $node->getAttribute('name');
+			$document->appendHeading(text => $nodeName, level =>'2', style => $headingStyle);
+#			$document->cellValue("ActivitiesTable", $row, 0, $nodeName);
+#			$row++;
+		}
+
+		$document->appendHeading(text => 'Preconditions', level =>'1', style => $headingStyle);
+		$document->appendHeading(text => 'Postconditions', level =>'1', style => $headingStyle);
+#		print OUTFILE "Assumptions: \n";
+#		print OUTFILE "Notes: \n";
+#		close OUTFILE;
+		$document->save;
+	}
+
+
+}

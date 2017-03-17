@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADI>
+  <Metadata>
+    <AMS Provider="Sony" Product="First-Run" Asset_Name="The_SonyMovie" Version_Major="1" Version_Minor="0" Description="The SonyMovie asset package" Creation_Date="2002-01-11" Provider_ID="indemand.com" Asset_ID="SONY2001081701004000" Asset_Class="package"/>
+    <App_Data App="MOD" Name="Provider_Content_Tier" Value="Sony1"/>
+    <App_Data App="MOD" Name="Metadata_Spec_Version" Value="CableLabsVOD1.1"/>
+  </Metadata>
+  <Asset>
+    <Metadata>
+      <AMS Provider="Sony" Product="First-Run" Asset_Name="The_SonyMovie_Title" Version_Major="1" Version_Minor="0" Description="The SonyMovie title metadata" Creation_Date="2002-01-11" Provider_ID="indemand.com" Asset_ID="SONY2001081701004001" Asset_Class="title"/>
+      <App_Data App="MOD" Name="Title_Sort_Name" Value="SonyMovie, The"/>
+      <App_Data App="MOD" Name="Title_Brief" Value="The SonyMovie"/>
+      <App_Data App="MOD" Name="Title" Value="NINOTCHKA"/>
+      <App_Data App="MOD" Name="Type" Value="title"/>
+      <App_Data App="MOD" Name="ISAN" Value="1881-66C7-3420-000-7-9F3A-02450-U"/>
+      <App_Data App="MOD" Name="Episode_Name" Value="Collision With destiny"/>
+      <App_Data App="MOD" Name="Episode_ID" Value="The only one"/>
+      <App_Data App="MOD" Name="Summary_Long" Value="Fictional romantic tale of a rich girl and poor boy who meet on the ill-fated voyage of the &apos;unsinkable&apos; ship"/>
+      <App_Data App="MOD" Name="Summary_Medium" Value="Fictional romantic tale of rich girl and poor boy who meet on the ill-fated voyage of the &apos;unsinkable&apos; ship"/>
+      <App_Data App="MOD" Name="Summary_Short" Value="Fictional romantic tale of a rich girl and poor boy who meet on the ill-fated voyage of the &apos;unsinkable&apos; ship"/>
+      <App_Data App="MOD" Name="Rating" Value="R"/>
+      <App_Data App="MOD" Name="Advisories" Value="AL"/>
+      <App_Data App="MOD" Name="Advisories" Value="N"/>
+      <App_Data App="MOD" Name="Closed_Captioning" Value="N"/>
+      <App_Data App="MOD" Name="Run_Time" Value="03:14:00"/>
+      <App_Data App="MOD" Name="Display_Run_Time" Value="03:14"/>
+      <App_Data App="MOD" Name="Year" Value="1997"/>
+      <App_Data App="MOD" Name="Country_of_Origin" Value="US"/>
+      <App_Data App="MOD" Name="Actors" Value="Winslet,Kate"/>
+      <App_Data App="MOD" Name="Actors" Value="DiCaprio,Leonardo"/>
+      <App_Data App="MOD" Name="Actors" Value="Zane,Billy"/>
+      <App_Data App="MOD" Name="Actors_Display" Value="Kate Winslet,Leonardo DiCaprio, Billy Zane"/>
+      <App_Data App="MOD" Name="Writer_Display" Value="James Cameron"/>
+      <App_Data App="MOD" Name="Director" Value="Cameron,James"/>
+      <App_Data App="MOD" Name="Producer" Value="Cameron,James"/>
+      <App_Data App="MOD" Name="Studio" Value="Paramount"/>
+      <App_Data App="MOD" Name="Category" Value="Sony/Movies A-Z"/>
+      <App_Data App="MOD" Name="Genre" Value="Drama"/>
+      <App_Data App="MOD" Name="Genre" Value="Romance"/>
+      <App_Data App="MOD" Name="Show_Type" Value="Movie"/>
+      <App_Data App="MOD" Name="Season_Premiere" Value="N"/>
+      <App_Data App="MOD" Name="Season_Finale" Value="N"/>
+      <App_Data App="MOD" Name="Chapter" Value="00:00:02:00,Opening Scene"/>
+      <App_Data App="MOD" Name="Chapter" Value="00:15:12:00,They Meet"/>
+      <App_Data App="MOD" Name="Chapter" Value="02:03:06:00,The Collision"/>
+      <App_Data App="MOD" Name="Chapter" Value="02:55:15:00,She Goes Under"/>
+      <App_Data App="MOD" Name="Chapter" Value="03:02:09:00,Final Scene"/>
+      <App_Data App="MOD" Name="Box_Office" Value="1835000000"/>
+      <App_Data App="MOD" Name="Propagation_Priority" Value="1"/>
+      <App_Data App="MOD" Name="Billing_ID" Value="56789"/>
+      <App_Data App="MOD" Name="Licensing_Window_Start" Value="2002-02-01T00:00:00"/>
+      <App_Data App="MOD" Name="Licensing_Window_End" Value="2002-03-31T11:59:59"/>
+      <App_Data App="MOD" Name="Preview_Period" Value="300"/>
+      <App_Data App="MOD" Name="Home_Video_Window" Value="1000"/>
+      <App_Data App="MOD" Name="Display_As_New" Value="7"/>
+      <App_Data App="MOD" Name="Display_As_Last_Chance" Value="7"/>
+      <App_Data App="MOD" Name="Maximum_Viewing_Length" Value="00:24:00"/>
+      <App_Data App="MOD" Name="Provider_QA_Contact" Value="John Doe, JDoe@Sony.com"/>
+      <App_Data App="MOD" Name="Contract_Name" Value="Sony"/>
+      <App_Data App="MOD" Name="Suggested_Price" Value="5.95"/>
+      <App_Data App="MOD" Name="Distributor_Royalty_Percent" Value="52.5"/>
+      <App_Data App="MOD" Name="Distributor_Royalty_Minimum" Value="3.124"/>
+      <App_Data App="MOD" Name="Distributor_Royalty_Flat_Rate" Value="3.155"/>
+      <App_Data App="MOD" Name="Distributor_Name" Value="Sony"/>
+      <App_Data App="MOD" Name="Studio_Royalty_Percent" Value="47.5"/>
+      <App_Data App="MOD" Name="Studio_Royalty_Minimum" Value="2.826"/>
+      <App_Data App="MOD" Name="Studio_Royalty_Flat_Rate" Value="2.795"/>
+      <App_Data App="MOD" Name="Studio_Name" Value="Paramount"/>
+      <App_Data App="MOD" Name="Studio_Code" Value="PAR"/>
+      <App_Data App="MOD" Name="Subscriber_View_Limit" Value="2002-02-01,2002-02-28,5"/>
+      <App_Data App="MOD" Name="Subscriber_View_Limit" Value="2002-03-01,2002-03-31,5"/>
+      <App_Data App="MOD" Name="Programmer_Call_Letters" Value="IND"/>
+      <App_Data App="MOD" Name="Recording_Artist" Value="Celine Dion"/>
+      <App_Data App="MOD" Name="Song_Title" Value="My Heart Will Go On"/>
+    </Metadata>
+    <Asset>
+      <Metadata>
+        <AMS Provider="Sony" Product="First-Run" Asset_Name="The_SonyMovie.mpg" Version_Major="1" Version_Minor="0" Description="The SonyMovie Movie" Creation_Date="2002-01-11" Provider_ID="indemand.com" Asset_ID="SONY2001081701004002" Asset_Class="movie"/>
+        <App_Data App="MOD" Name="Encryption" Value="N"/>
+        <App_Data App="MOD" Name="Type" Value="movie"/>
+        <App_Data App="MOD" Name="Audio_Type" Value="Dolby Digital"/>
+        <App_Data App="MOD" Name="Screen_Format" Value="Widescreen"/>
+        <App_Data App="MOD" Name="Languages" Value="en"/>
+        <App_Data App="MOD" Name="Subtitle_Languages" Value="es"/>
+        <App_Data App="MOD" Name="Dubbed_Languages" Value="es"/>
+        <App_Data App="MOD" Name="Copy_Protection" Value="N"/>
+        <App_Data App="MOD" Name="Content_FileSize" Value="3907840625"/>
+        <App_Data App="MOD" Name="Content_CheckSum" Value="12558D3269D25852BD26548DC2654CA"/>
+      </Metadata>
+      <Content Value="The_SonyMovie.mpg"/>
+    </Asset>
+    <Asset>
+      <Metadata>
+        <AMS Provider="Sony" Product="First-Run" Asset_Name="The_SonyMovie_Preview.mpg" Version_Major="1" Version_Minor="0" Description="The SonyMovie Preview" Creation_Date="2002-01-11" Provider_ID="indemand.com" Asset_ID="SONY2001081701004003" Asset_Class="preview"/>
+        <App_Data App="MOD" Name="Rating" Value="G"/>
+        <App_Data App="MOD" Name="Run_Time" Value="00:00:45"/>
+        <App_Data App="MOD" Name="Type" Value="preview"/>
+        <App_Data App="MOD" Name="Audio_Type" Value="Dolby Digital"/>
+        <App_Data App="MOD" Name="Screen_Format" Value="Widescreen"/>
+        <App_Data App="MOD" Name="Languages" Value="en"/>
+        <App_Data App="MOD" Name="Subtitle_Languages" Value="es"/>
+        <App_Data App="MOD" Name="Dubbed_Languages" Value="es"/>
+        <App_Data App="MOD" Name="Content_FileSize" Value="25284375"/>
+        <App_Data App="MOD" Name="Content_CheckSum" Value="A1258D3269D25852BD26548DC2654C1"/>
+      </Metadata>
+      <Content Value="The_SonyMovie_Preview.mpg"/>
+    </Asset>
+    <Asset>
+      <Metadata>
+        <AMS Provider="Sony" Product="First-Run" Asset_Name="The_SonyMovie_Box_Cover.bmp" Version_Major="1" Version_Minor="0" Description="The SonyMovie Box Cover" Creation_Date="2002-01-11" Provider_ID="indemand.com" Asset_ID="SONY2001081701004004" Asset_Class="box cover"/>
+        <App_Data App="MOD" Name="Type" Value="box cover"/>
+        <App_Data App="MOD" Name="Image_Aspect_Ratio" Value="320x240"/>
+        <App_Data App="MOD" Name="Content_FileSize" Value="15235"/>
+        <App_Data App="MOD" Name="Content_CheckSum" Value="B3258D3269D25852BD26548DC2654CD"/>
+      </Metadata>
+      <Content Value="The_SonyMovie_Box_Cover.bmp"/>
+    </Asset>
+  </Asset>
+</ADI>

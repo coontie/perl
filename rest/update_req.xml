@@ -1,0 +1,5 @@
+<Entity Type="requirement">
+<Fields>
+	<Field Name="req-comment"><Value>The system shall collect for reporting bit error rate (Calculated by dividing the number of bits received in error by the total number of bits transmitted) of the stream post-acquisition at the Origin servers</Value></Field>
+</Fields>
+</Entity>
